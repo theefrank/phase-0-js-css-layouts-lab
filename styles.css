@@ -1,3 +1,4 @@
+/* Container styling */
 .cat-container {
     display: flex;
     flex-wrap: wrap;
@@ -5,31 +6,41 @@
     padding: 2em;
 }
 
+/* Individual cat cards */
 .cat-breed {
     flex: 1 1 300px;
     margin: 1em;
     padding: 1em;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
 }
 
+/* Hover effect */
+.cat-breed:hover {
+    transform: scale(1.05);
+}
+
+/* Images */
 .cat-breed img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
+/* Headings */
 .cat-breed h3 {
     margin: 0.5em 0;
 }
 
+/* Paragraphs */
 .cat-breed p {
     margin: 0.5em 0 1em;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     .cat-container {
         flex-direction: column;
@@ -40,8 +51,4 @@
         flex: 1 1 100%;
         max-width: 100%;
     }
-}
-
-.cat-breed:hover {
-    transform: scale(1.05);
 }
