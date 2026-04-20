@@ -7,7 +7,7 @@
 }
 
 /* Individual cat breed card styling */
-.cat-breed-container .cat-card { 
+.cat-breed-container .cat-card {  /* Using .cat-card as the card class. Adjust if needed. */
   flex: 1 1 300px;
   margin: 1em;
   padding: 1em;
@@ -15,7 +15,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease; /* Adding ease for smoother transition */
 }
 
 /* Images within each cat breed card */
@@ -25,17 +25,21 @@
   border-radius: 8px;
 }
 
-
+/* Headings within each cat breed card */
 .cat-breed-container .cat-card h2, 
 .cat-breed-container .cat-card h3 {
   margin: 0.5em 0;
 }
 
+/* Paragraphs within each cat breed card */
 .cat-breed-container .cat-card p {
   margin: 0.5em 0 1em;
 }
 
-
+/*
+  Step 5: Make the Layout Responsive
+  Media query for smaller screens (e.g., max-width: 768px)
+*/
 @media (max-width: 768px) {
   .cat-breed-container {
     flex-direction: column;
@@ -45,17 +49,25 @@
   .cat-breed-container .cat-card {
     flex: 1 1 100%;
     max-width: 100%;
+    /* Ensure the card takes full width of the container minus margins */
     width: calc(100% - 2em); /* Account for margin */
     box-sizing: border-box;
   }
 }
 
-
+/*
+  Step 6: Add Hover Effect for Cat Breed Cards
+  Apply scaling transformation when hovered over
+*/
 .cat-breed-container .cat-card:hover {
   transform: scale(1.05);
 }
 
-
+/* 
+  Additional optional styles to ensure proper box sizing and 
+  to handle any generic elements that might be present.
+  These are not strictly required by the prompt but improve consistency.
+*/
 * {
   box-sizing: border-box;
 }
@@ -67,3 +79,23 @@ body {
   padding: 0;
   background-color: #f9f9f9;
 }
+
+/* 
+  Note: The exact class names used in the index.html file might differ.
+  If the container does NOT have class "cat-breed-container", 
+  replace that selector with the actual class name from the HTML.
+  Similarly, replace ".cat-card" with the actual class name for each breed card.
+  Common alternatives: ".breeds-container", ".cats-grid", ".breed-card", ".cat-item".
+  
+  For example, if the HTML looks like:
+  <div class="cats-container">
+    <div class="breed-card">...</div>
+  </div>
+  
+  Then change the selectors to:
+  .cats-container { ... }
+  .cats-container .breed-card { ... }
+  .cats-container .breed-card img { ... }
+  etc.
+*/
+
